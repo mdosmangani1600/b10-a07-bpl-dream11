@@ -1,0 +1,9 @@
+.banner{
+    background-image: url('../image/bg-shadow.png');
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+  }
