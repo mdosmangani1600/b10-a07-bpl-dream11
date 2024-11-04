@@ -17,7 +17,7 @@ const Players = ({addToSelected}) => {
 
 
     return (
-        <div>
+        <div className="w-11/12 mx-auto">
             <div>
             <h2 className="font-bold text-2xl">Available Players</h2>
             </div>

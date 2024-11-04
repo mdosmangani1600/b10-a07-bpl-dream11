@@ -6,7 +6,7 @@ const SelectedPlayer = ({selectedPlayer, handleRemove}) => {
 
     
     return (
-        <div>
+        <div className='w-11/12 mx-auto'>
             <h2 className=' font-semibold text-2xl lg:mb-5'>Selected Player:({selectedPlayer.length} /6)</h2>
             {
                 selectedPlayer.map(player => <SelectedPlayers key={player.playerId}
