@@ -1,10 +1,16 @@
 
+import logo from '../Image/logo-footer.png'
 
 const Footer = () => {
     return (
-        <dir className="bg-slate-950 w-full">
+        <div className="bg-slate-950 w-full pt-40 flex flex-col justify-center items-center  ">
 
-            <div className="text-white p-10 flex justify-between w-11/12 mx-auto">
+            <div className=''>
+                <img src={logo} alt="" />
+            </div>
+
+            <div className='w-full'>
+            <div className="text-white p-10 md:flex justify-between w-11/12 mx-auto">
             <div className=" space-y-4">
                 <h4 className=" font-semibold text-lg">About Us</h4>
                 <p>We are a passionate team <br /> dedicated to providing the best <br /> services to our customers.</p>
@@ -27,8 +33,9 @@ const Footer = () => {
             </div>
             </div>
             </div>
+            </div>
             
-        </dir>
+        </div>
     );
 };
 

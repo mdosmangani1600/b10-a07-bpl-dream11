@@ -4,7 +4,7 @@ import logo from '../image/logo.png'
 
 const Header = ({freeCredit}) => {
     return (
-        <div className='flex justify-between items-center w-11/12 mx-auto'>
+        <div className='flex justify-between items-center w-11/12 mx-auto sticky top-0 backdrop-blur-md'>
             <img className="" src={logo} alt="" />
             <div className='space-x-10'>
                 <a href="">Home</a>

@@ -17,12 +17,12 @@ const Players = ({addToSelected}) => {
 
 
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto pb-28">
             <div>
             <h2 className="font-bold text-2xl">Available Players</h2>
             </div>
             
-        <div className="mt-10 grid grid-cols-3 gap-5 w-full p-5 ">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 w-full p-5 ">
         {
                 players.map(player => <Player key={player.playerId} addToSelected={addToSelected}
                  player={player}></Player>)

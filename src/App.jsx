@@ -10,11 +10,14 @@ import SelectedPlayer from './assets/components/SelectedPlayer/SelectedPlayer'
 import Subscribe from './assets/components/Subscribe/Subscribe'
 import Footer from './assets/components/Footer/Footer'
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 function App() {
   const [selectedPlayer,setSelectedPlayer] = useState([]);
 
-  // const {biddingPrice} = player;
+  
 
   const [activeTab,setActiveTab] = useState(true);
 
@@ -23,6 +26,7 @@ function App() {
   
   const handleFreeCredit = () =>{
     setFreeCredit(freeCredit + 2555000)
+    toast.success('Claimed free Credit')
     
   }
 
@@ -31,6 +35,7 @@ function App() {
 
     const updatedSelectedPlayer = selectedPlayer.filter(player =>player.playerId !== id)
     setSelectedPlayer(updatedSelectedPlayer);
+    toast.warning('Player removed')
   }
 
   
@@ -48,12 +53,12 @@ function App() {
       const newSelectedPlayer =[...selectedPlayer, player] ;
     setSelectedPlayer(newSelectedPlayer);
 
-    setFreeCredit(freeCredit -player.biddingPrice)
-    alert('Congratulations..Player selected')
+    setFreeCredit(freeCredit - player.biddingPrice)
+    toast.success('Congratulations  . Player selected')
 
     }
     else{
-      alert('Something wrong Player  selected fail')
+      toast.error('Something wrong cant select player')
     }
     
 
@@ -74,13 +79,25 @@ function App() {
             </div>
             </div>
       {
-        activeTab ? <Players setActiveTab={setActiveTab} addToSelected={addToSelected}  ></Players> :<SelectedPlayer selectedPlayer={selectedPlayer} handleRemove={handleRemove} ></SelectedPlayer>
+        activeTab ? <Players setActiveTab={setActiveTab} addToSelected={addToSelected}  ></Players> :<SelectedPlayer selectedPlayer={selectedPlayer} handleRemove={handleRemove} setActiveTab={setActiveTab} ></SelectedPlayer>
       }
       <Subscribe></Subscribe>
       <Footer></Footer>
+      <ToastContainer
+position="top-center"
+autoClose={3000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+
+/>
       
-      
-      
+
     </>
   )
 }

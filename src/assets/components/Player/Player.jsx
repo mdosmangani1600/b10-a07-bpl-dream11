@@ -16,7 +16,7 @@ const Player = ({player, addToSelected}) => {
                 <h5>{bowlingType}</h5>
             </div>
             <div className='flex justify-between font-semibold'>
-                <h4>{biddingPrice}</h4>
+                <h4>Price : {biddingPrice}</h4>
                 <button 
                 onClick={() => addToSelected(player)}
                 className='p-1 border rounded-xl px-3'>Choose Player</button>

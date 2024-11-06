@@ -14,6 +14,8 @@ const SelectedPlayers = ({player,handleRemove}) => {
             </div>
             <div className=' text-center items-center'>
                 <button className=' ' onClick={() => handleRemove(player.playerId)}><i className="fa-solid fa-trash-can text-red-600"></i></button>
+                
+                
             </div>
         </div>
     );
@@ -22,6 +24,7 @@ const SelectedPlayers = ({player,handleRemove}) => {
 SelectedPlayers.propTypes ={
     player:PropTypes.object.isRequired,
     handleRemove:PropTypes.object.isRequired
+    
 }
 
 export default SelectedPlayers;

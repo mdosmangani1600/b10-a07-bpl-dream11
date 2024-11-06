@@ -6,7 +6,8 @@ import './subscribe.css'
 
 const Subscribe = () => {
     return (
-        <div className='subscribe w-11/12 mx-auto bg-gray-100 rounded-3xl flex flex-col  space-y-7 p-10 '>
+        <div className='mx-auto relative -top-24 left-16'>
+            <div className='subscribe w-11/12 mx-auto  absolute  bg-gray-100 rounded-3xl flex flex-col  space-y-7 p-10 '>
             
             <h2 className='font-bold text-3xl'>Subscribe to our Newsletter</h2>
             <p className='text-xl'>Get the latest updates and news right in your inbox!</p>
@@ -16,7 +17,8 @@ const Subscribe = () => {
             </div>
             
         </div>
-    );
+        </div>
+    ); 
 };
 
 export default Subscribe;
